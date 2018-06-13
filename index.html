@@ -1,5 +1,3 @@
-<!-- python -m SimpleHTTPServer 8080 //-->
-<!-- http://bl.ocks.org/mbostock/4062045 //-->
 
 <!DOCTYPE html>
 <head>
@@ -249,7 +247,7 @@ function drawNodes(nodes) {
         .attr("cx", function(d, i) { return d.x; })
         .attr("cy", function(d, i) { return d.y; })
         .attr("r",  function(d, i) { return 6; })
-        .style("fill",   function(d, i) { return color(d.group); })
+        .style("fill",    "steelblue" )
         .on("mouseover", function(d, i) { addTooltip(d3.select(this)); })
         .on("mouseout",  function(d, i) { d3.select("#tooltip").remove(); });
 
@@ -272,7 +270,7 @@ function drawNodes(nodes) {
         .attr("y", function(d, i) { return d.y; })
         .attr("width", 16)
         .attr("height",16)
-        .style("fill",   function(d, i) { return color(d.group); })
+        .style("fill",   function(d, i) { return "steelblue"; })
         .on("click", function(){
 		// Determine if current line is visible
 		var active   = topicName.active ? false : true,
@@ -292,7 +290,7 @@ function drawNodes(nodes) {
         .attr("cx", function(d, i) { return d.x + d.width; })
         .attr("cy", function(d, i) { return d.y + d.height; })
         .attr("r",  function(d, i) { return 80; })
-        .style("stroke", function(d, i) { return color(d.group); })
+        .style("stroke", function(d, i) { return "steelblue"; })
         .style("fill", "none");
 
 
