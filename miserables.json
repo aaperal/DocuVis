@@ -1,0 +1,700 @@
+{
+ "links": [
+  {
+   "source": 0, 
+   "target": 1, 
+   "type": "outerlink", 
+   "value": 50
+  }, 
+  {
+   "source": 0, 
+   "target": 6, 
+   "type": "innerlink", 
+   "value": 0.0007766235807860177
+  }, 
+  {
+   "source": 0, 
+   "target": 8, 
+   "type": "innerlink", 
+   "value": 0.0009132261347129078
+  }, 
+  {
+   "source": 0, 
+   "target": 10, 
+   "type": "innerlink", 
+   "value": 0.0009132261347127967
+  }, 
+  {
+   "source": 0, 
+   "target": 11, 
+   "type": "innerlink", 
+   "value": 0.0009132261347125747
+  }, 
+  {
+   "source": 0, 
+   "target": 12, 
+   "type": "innerlink", 
+   "value": 0.0009132261347126857
+  }, 
+  {
+   "source": 0, 
+   "target": 16, 
+   "type": "innerlink", 
+   "value": 0.0009823107833542121
+  }, 
+  {
+   "source": 0, 
+   "target": 18, 
+   "type": "innerlink", 
+   "value": 0.0009132261347127967
+  }, 
+  {
+   "source": 0, 
+   "target": 20, 
+   "type": "innerlink", 
+   "value": 0.060832066945021426
+  }, 
+  {
+   "source": 0, 
+   "target": 22, 
+   "type": "innerlink", 
+   "value": 0.0009132261347127967
+  }, 
+  {
+   "source": 1, 
+   "target": 7, 
+   "type": "innerlink", 
+   "value": 0.0007766235807860177
+  }, 
+  {
+   "source": 2, 
+   "target": 4, 
+   "type": "innerlink", 
+   "value": 0.08013494003143108
+  }, 
+  {
+   "source": 2, 
+   "target": 9, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 2, 
+   "target": 13, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 2, 
+   "target": 19, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 3, 
+   "target": 5, 
+   "type": "innerlink", 
+   "value": 0.6080996320958008
+  }, 
+  {
+   "source": 3, 
+   "target": 14, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 3, 
+   "target": 15, 
+   "type": "innerlink", 
+   "value": 0.00010000000000022205
+  }, 
+  {
+   "source": 3, 
+   "target": 21, 
+   "type": "innerlink", 
+   "value": 0.6590148170043254
+  }, 
+  {
+   "source": 4, 
+   "target": 5, 
+   "type": "outerlink", 
+   "value": 50
+  }, 
+  {
+   "source": 4, 
+   "target": 9, 
+   "type": "innerlink", 
+   "value": 0.08013494003143108
+  }, 
+  {
+   "source": 4, 
+   "target": 13, 
+   "type": "innerlink", 
+   "value": 0.08013494003143119
+  }, 
+  {
+   "source": 4, 
+   "target": 19, 
+   "type": "innerlink", 
+   "value": 0.08013494003143119
+  }, 
+  {
+   "source": 5, 
+   "target": 14, 
+   "type": "innerlink", 
+   "value": 0.6080996320958008
+  }, 
+  {
+   "source": 5, 
+   "target": 15, 
+   "type": "innerlink", 
+   "value": 0.6080996320958008
+  }, 
+  {
+   "source": 6, 
+   "target": 7, 
+   "type": "outerlink", 
+   "value": 50
+  }, 
+  {
+   "source": 6, 
+   "target": 8, 
+   "type": "innerlink", 
+   "value": 0.0030723209259665538
+  }, 
+  {
+   "source": 6, 
+   "target": 10, 
+   "type": "innerlink", 
+   "value": 0.0030723209259663317
+  }, 
+  {
+   "source": 6, 
+   "target": 11, 
+   "type": "innerlink", 
+   "value": 0.0030723209259664428
+  }, 
+  {
+   "source": 6, 
+   "target": 12, 
+   "type": "innerlink", 
+   "value": 0.0030723209259665538
+  }, 
+  {
+   "source": 6, 
+   "target": 16, 
+   "type": "innerlink", 
+   "value": 0.0031412562929029717
+  }, 
+  {
+   "source": 6, 
+   "target": 18, 
+   "type": "innerlink", 
+   "value": 0.0030723209259664428
+  }, 
+  {
+   "source": 6, 
+   "target": 20, 
+   "type": "innerlink", 
+   "value": 0.06286168598611964
+  }, 
+  {
+   "source": 6, 
+   "target": 22, 
+   "type": "innerlink", 
+   "value": 0.0030723209259664428
+  }, 
+  {
+   "source": 8, 
+   "target": 10, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 8, 
+   "target": 11, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 8, 
+   "target": 12, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 8, 
+   "target": 16, 
+   "type": "innerlink", 
+   "value": 0.0001691408758086709
+  }, 
+  {
+   "source": 8, 
+   "target": 18, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 8, 
+   "target": 20, 
+   "type": "innerlink", 
+   "value": 0.060067608036400225
+  }, 
+  {
+   "source": 8, 
+   "target": 22, 
+   "type": "innerlink", 
+   "value": 0.00010000000000022205
+  }, 
+  {
+   "source": 9, 
+   "target": 13, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 9, 
+   "target": 19, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 10, 
+   "target": 11, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 10, 
+   "target": 12, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 10, 
+   "target": 16, 
+   "type": "innerlink", 
+   "value": 0.00016914087580855987
+  }, 
+  {
+   "source": 10, 
+   "target": 18, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 10, 
+   "target": 20, 
+   "type": "innerlink", 
+   "value": 0.060067608036400114
+  }, 
+  {
+   "source": 10, 
+   "target": 22, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 11, 
+   "target": 12, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 11, 
+   "target": 16, 
+   "type": "innerlink", 
+   "value": 0.00016914087580855987
+  }, 
+  {
+   "source": 11, 
+   "target": 18, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 11, 
+   "target": 20, 
+   "type": "innerlink", 
+   "value": 0.0600676080364
+  }, 
+  {
+   "source": 11, 
+   "target": 22, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 12, 
+   "target": 16, 
+   "type": "innerlink", 
+   "value": 0.0001691408758086709
+  }, 
+  {
+   "source": 12, 
+   "target": 18, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 12, 
+   "target": 20, 
+   "type": "innerlink", 
+   "value": 0.060067608036400114
+  }, 
+  {
+   "source": 12, 
+   "target": 22, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 13, 
+   "target": 19, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 14, 
+   "target": 15, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 14, 
+   "target": 21, 
+   "type": "innerlink", 
+   "value": 0.6590148170043253
+  }, 
+  {
+   "source": 15, 
+   "target": 21, 
+   "type": "innerlink", 
+   "value": 0.6590148170043254
+  }, 
+  {
+   "source": 16, 
+   "target": 17, 
+   "type": "outerlink", 
+   "value": 50
+  }, 
+  {
+   "source": 16, 
+   "target": 18, 
+   "type": "innerlink", 
+   "value": 0.0001691408758086709
+  }, 
+  {
+   "source": 16, 
+   "target": 20, 
+   "type": "innerlink", 
+   "value": 0.056121740116255606
+  }, 
+  {
+   "source": 16, 
+   "target": 22, 
+   "type": "innerlink", 
+   "value": 0.0001691408758087819
+  }, 
+  {
+   "source": 17, 
+   "target": 21, 
+   "type": "innerlink", 
+   "value": 0.056121740116255606
+  }, 
+  {
+   "source": 18, 
+   "target": 20, 
+   "type": "innerlink", 
+   "value": 0.060067608036400114
+  }, 
+  {
+   "source": 18, 
+   "target": 22, 
+   "type": "innerlink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 20, 
+   "target": 21, 
+   "type": "outerlink", 
+   "value": 50
+  }, 
+  {
+   "source": 20, 
+   "target": 22, 
+   "type": "innerlink", 
+   "value": 0.060067608036400114
+  }, 
+  {
+   "source": 0, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 0.0009132261347127967
+  }, 
+  {
+   "source": 6, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 0.0030723209259664428
+  }, 
+  {
+   "source": 8, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 10, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 11, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 9.999999999977796e-05
+  }, 
+  {
+   "source": 12, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 16, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 0.0001691408758086709
+  }, 
+  {
+   "source": 18, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 20, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 0.060067608036400114
+  }, 
+  {
+   "source": 22, 
+   "target": 23, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 1, 
+   "target": 24, 
+   "type": "topiclink", 
+   "value": 0.95977890213946
+  }, 
+  {
+   "source": 2, 
+   "target": 24, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 4, 
+   "target": 24, 
+   "type": "topiclink", 
+   "value": 0.0801349400314313
+  }, 
+  {
+   "source": 7, 
+   "target": 24, 
+   "type": "topiclink", 
+   "value": 0.9230558103407804
+  }, 
+  {
+   "source": 9, 
+   "target": 24, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 13, 
+   "target": 24, 
+   "type": "topiclink", 
+   "value": 9.999999999977796e-05
+  }, 
+  {
+   "source": 19, 
+   "target": 24, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 3, 
+   "target": 25, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 5, 
+   "target": 25, 
+   "type": "topiclink", 
+   "value": 0.6080996320958008
+  }, 
+  {
+   "source": 14, 
+   "target": 25, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 15, 
+   "target": 25, 
+   "type": "topiclink", 
+   "value": 0.0001
+  }, 
+  {
+   "source": 17, 
+   "target": 25, 
+   "type": "topiclink", 
+   "value": 0.9883408771093868
+  }, 
+  {
+   "source": 21, 
+   "target": 25, 
+   "type": "topiclink", 
+   "value": 0.6590148170043253
+  }
+ ], 
+ "nodes": [
+  {
+   "group": 0, 
+   "name": "Making the Right Moves.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 1, 
+   "name": "Making the Right Moves.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 1, 
+   "name": "For Graduate Students & Postdoctoral Scholars.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 2, 
+   "name": "Faculty Mentoring Program.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 1, 
+   "name": "Graduate Women's Gatherings.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 2, 
+   "name": "Graduate Women's Gatherings.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "Faculty Mentoring Program Resources.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 1, 
+   "name": "Faculty Mentoring Program Resources.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "Diversity, Inclusion, and Equity.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 1, 
+   "name": "Career Development Guides.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "Academic Guidance.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "Faculty Mentoring Toolkit.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "Faculty Mentoring Program2.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 1, 
+   "name": "Funding Opportunities for New and Young Faculty.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 2, 
+   "name": "Report of the Faculty Mentoring Study.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 2, 
+   "name": "Top Ten Things New Faculty Members .txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "Faculty Responsibilities in Mentoring Relationships.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 2, 
+   "name": "Faculty Responsibilities in Mentoring Relationships.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "Helping Students: A Peer Mentoring Approach.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 1, 
+   "name": "Career Resources.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "Mentoring Program.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 2, 
+   "name": "Mentoring Program.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "Advising & Mentoring.txt", 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "\"faculty\" ", 
+   "type": "topic"
+  }, 
+  {
+   "group": 1, 
+   "name": "\"career\" ", 
+   "type": "topic"
+  }, 
+  {
+   "group": 2, 
+   "name": "\"mentoring\" ", 
+   "type": "topic"
+  }
+ ]
+}
