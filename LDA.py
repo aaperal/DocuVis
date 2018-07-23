@@ -12,6 +12,7 @@ import ntpath
 import scipy
 import json
 import matplotlib.pyplot as plt
+import csv
 
 from gensim.models import Phrases
 from gensim.models.coherencemodel import CoherenceModel
@@ -127,6 +128,7 @@ for topic_number in range(1, 8, 1):
 #topic matrix and nodes list
 
 topic_matrix = []
+topic_node_topic_matrix = []
 
 document_nodes_list = []
 nodes_id = 0
@@ -135,6 +137,7 @@ nodes_file_list = []
 nodes_file_id = 0
 
 nodes_topic_list = []
+nodes_topicweight_list = []
 
 
 for text in corpus:
@@ -150,10 +153,11 @@ for text in corpus:
         if features[1] > max_group_weight:
             topic_id = features[0]
             topic_matrix.append(x)
-            document_nodes_list.append({"name": path_leaf(file_list[nodes_file_id]), "type":"document","group": topic_id})
+            document_nodes_list.append({"name": path_leaf(file_list[nodes_file_id]), "type":"document","group": topic_id,"id": nodes_id,"fileid": nodes_file_id})
             nodes_id = nodes_id + 1
             nodes_file_list.append(nodes_file_id)
             nodes_topic_list.append(topic_id)
+            nodes_topicweight_list.append(topic_lists)
 
     nodes_file_id = nodes_file_id + 1
 
@@ -175,15 +179,21 @@ for n in range(nodes_id):
             links_list.append(record)
 #topic node list
 topicnode_list=[]
+
+topicname_list=[]
+
 for topic in texts_lda.show_topics(num_topics= topic_number, num_words=10):
     majot_topic = topic[1].replace("+", ",")
     majot_topic = majot_topic.split(',')
     feature = majot_topic[1]
     feature = feature.split('*')
+    k = feature[1].encode('utf8')
     topicnode_list.append({"name": feature[1] , "type":"topic","group": topic[0]})
+    topicname_list.append(k)
     #build link between topic-nodes and docement-nodes
     x = [0]* topic_number
     x[topic[0]] = 1
+    topic_node_topic_matrix.append(x)
     for n in range(nodes_id):
         if nodes_topic_list[n] == topic[0]:
             cosine_distance = scipy.spatial.distance.cosine(topic_matrix[n], x)
@@ -192,13 +202,36 @@ for topic in texts_lda.show_topics(num_topics= topic_number, num_words=10):
                 record = {"value": cosine_distance, "type": "topiclink", "source": n, "target": nodes_id+topic[0]}
                 links_list.append(record)
 
+for n in range(len(topic_node_topic_matrix)):
+    for m in range(n+1,len(topic_node_topic_matrix)):
+        cosine_distance = scipy.spatial.distance.cosine(topic_node_topic_matrix[n], topic_node_topic_matrix[m])
+        cosine_distance = cosine_distance + 0.0001
+        record = {"value": cosine_distance, "type": "outertopiclink", "source": nodes_id+n, "target": nodes_id+m}
+        links_list.append(record)
+
+for n in range(nodes_id):
+    k = str(n)
+    with open("data" + k + ".csv", 'wb') as csvfile:
+        filewriter = csv.writer(csvfile, delimiter=',',
+                                quotechar='|', quoting=csv.QUOTE_MINIMAL)
+        filewriter.writerow(['topic', 'weight'])
+        topiclist = nodes_topicweight_list[n]
+        m = 0
+        for topic in topicname_list:
+            weight = 0
+            for feature in topiclist:
+                if feature[0] == m:
+                    weight = feature[1]
+            topic = ''.join(topic.split())
+            t = [topic, weight]
+            filewriter.writerow(t)
+            m += 1
 
 nodes_list = document_nodes_list+topicnode_list
 
 
-print topic_matrix
-print nodes_list
-print links_list
+
+
 
 json_prep = {"nodes":nodes_list, "links":links_list}
 
@@ -211,12 +244,6 @@ filename_out = 'miserables.json'
 json_out = open(filename_out,'w')
 json_out.write(json_dump)
 json_out.close()
-
-plt.bar(x= topic_number_array, height=coherence_array, align = 'center')
-
-plt.xlabel('topic number')
-plt.ylabel('coherence')
-plt.title('coherence of different topic number')
 
 
 
