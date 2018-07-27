@@ -1,6 +1,5 @@
 topic,weight
-"teaching",0
-"program",0
-"mentoring",0
-"graduate",0
-"faculty",0.99816746
+faculty,0.9956548
+mentor,0
+career,0
+mentoring,0

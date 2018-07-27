@@ -25,7 +25,6 @@ b {
 
 .ring {
   fill: none;
-  stroke: #000;
   pointer-events: none;
 }
 
@@ -40,7 +39,7 @@ b {
     stroke-width: 1px;
 }
 
-#tooltip {
+.tooltip {
     font-size: 10pt;
     font-weight: 900;
 
@@ -118,20 +117,22 @@ var width  = 960;
 var height = 500;
 var margin = 20;
 var pad = margin / 2;
-var color = d3.scaleOrdinal(d3.schemeCategory20);
+var color = d3.scaleOrdinal(d3.schemeCategory10);
 // Generates a tooltip for a SVG circle element based on its ID
 function addTooltip(circle) {
     var x = parseFloat(circle.attr("cx"));
     var y = parseFloat(circle.attr("cy"));
     var r = parseFloat(circle.attr("r"));
     var text = circle.attr("name");
+    var tooltipid = "tooltip" + circle.attr("fileid")
     var tooltip = d3.select("#plot")
         .append("text")
         .text(text)
         .attr("x", x)
         .attr("y", y)
         .attr("dy", -r * 2)
-        .attr("id", "tooltip");
+        .attr("class","tooltip")
+        .attr("id", tooltipid);
     var offset = tooltip.node().getBBox().width / 2;
     if ((x - offset) < 0) {
         tooltip.attr("text-anchor", "start");
@@ -276,7 +277,7 @@ function drawGraph(graph) {
 function drawDonuts1(circle){
     var radius = 100;
     var g = svg.append("g").attr("transform", "translate(" + 110 + "," + 250 + ")");
-    var color = d3.scaleOrdinal(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+    var color = d3.scaleOrdinal(d3.schemeCategory10);
     var text = circle.attr("name");
 
     var pie = d3.pie()
@@ -327,8 +328,8 @@ function drawDonuts1(circle){
       .style("text-anchor", "middle")
       .attr("x", 0)
       .attr("y", 5)
-      .text(text);
-
+      .text(text)
+      .call(wrap, 100);
 
 });
 
@@ -337,7 +338,7 @@ function drawDonuts1(circle){
 function drawDonuts2(circle){
     var radius = 100;
     var g = svg.append("g").attr("transform", "translate(" + 850 + "," + 250 + ")");
-    var color = d3.scaleOrdinal(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+    var color = d3.scaleOrdinal(d3.schemeCategory10);
     var text = circle.attr("name");
 
     var pie = d3.pie()
@@ -367,7 +368,7 @@ function drawDonuts2(circle){
 
       arc.append("path")
           .attr("d", path)
-          .attr("fill", function(d) { return color(d.data.topic); });
+          .attr("fill", function(d) {return color(d.data.topic); });
 
       arc.each(function(d){
                if (d.data.weight != 0) {
@@ -388,7 +389,9 @@ function drawDonuts2(circle){
       .style("text-anchor", "middle")
       .attr("x", 0)
       .attr("y", 5)
-      .text(text);
+      .text(text)
+      .call(wrap, 100);
+
 
 
 });
@@ -398,7 +401,8 @@ function drawDonuts2(circle){
 // Draws nodes on plot
 function drawNodes(nodes) {
     // used to assign nodes color by group
-    var color = d3.scaleOrdinal(d3.schemeCategory20);
+    var color = d3.scaleOrdinal(d3.schemeCategory10)
+                .domain([0, 1, 2, 3, 4, 5, 6, 7, 8, 9]);
     // https://github.com/mbostock/d3/wiki/Force-Layout#wiki-nodes
     d3.select("#plot").selectAll(".node")
         .data(nodes)
@@ -413,54 +417,92 @@ function drawNodes(nodes) {
         .append("circle")
         .attr("class", "document")
         .attr("id", function(d, i) { return d.id; })
+        .attr("fileid", function(d, i) { return d.fileid; })
         .attr("name", function(d, i) { return d.name; })
         .attr("cx", function(d, i) { return d.x; })
         .attr("cy", function(d, i) { return d.y; })
         .attr("r",  function(d, i) { return 6; })
-        .style("fill",    "steelblue" )
+        .attr("locker", 0 )
+        .attr("fill", function(d) { return color(d.group); })
         .on("mouseover", function(circle, i) {
             d3.selectAll(".document")
                 .each(function(d){
-                    if (circle.fileid == d.fileid) {
+                    if (circle.fileid == d.fileid && d3.select(this).attr("locker") == 0) {
                         d3.select(this)
-                            .attr("r", function (d, i) {
-                                return 18;
-                            })
+                                .attr("r", function (d, i) {
+                                    return 18;
+                                })
                         addTooltip(d3.select(this));
                     }
                     });
         })
-        .on("mouseout",  function(d, i) {
-            d3.selectAll("#tooltip").remove()
+        .on("mouseout",  function(circle, i) {
+            var tooltipid = "#tooltip" + circle.fileid
             d3.selectAll(".document")
-               .attr("r",  function(d, i) { return 6; })
+                .each(function(d){
+                    if (circle.fileid == d.fileid && d3.select(this).attr("locker") == 0) {
+                        d3.selectAll(tooltipid).remove()
+                        d3.select(this)
+                                .attr("r", function (d, i) {
+                                    return 6;
+                                })
+                    }
+                    })
+
         })
 
-        .on("click",function(){
+        .on("click",function(circle){
+
          if (donuts1active == 0)
          {
+             d3.selectAll(".document")
+                .each(function(d){
+                    if (circle.fileid == d.fileid ) {
+                        d3.select(this)
+                                .attr("r", function (d, i) {
+                                    return 18;
+                                })
+                        addTooltip(d3.select(this))
+                        d3.select(this).attr("locker", 1 )
+                        ;
+                    }
+                    });
+
              drawDonuts1(d3.select(this))
              donuts1active = 1
          }
-         else if (donuts1active == 1)
-         { if (donuts2active == 0)
+         else if (donuts1active == 1 && donuts2active == 0)
             {
+                 d3.selectAll(".document")
+                .each(function(d){
+                    if (circle.fileid == d.fileid ) {
+                        d3.select(this)
+                                .attr("r", function (d, i) {
+                                    return 18;
+                                })
+                        addTooltip(d3.select(this))
+                        d3.select(this).attr("locker", 1 )
+                        ;
+                    }
+                    });
+
                 drawDonuts2(d3.select(this))
                 donuts2active = 1
             }
-            else
-            {
-                d3.selectAll("#arc2").remove()
-                d3.selectAll("#label12").remove()
-                donuts2active = 0
-                donuts1active = 2
-            };
-         }
-         else
-         {d3.selectAll("#arc1").remove()
+         else {
+             d3.selectAll(".tooltip").remove()
+             d3.selectAll(".document")
+                 .attr("r", function (d, i) {
+                     return 6
+                 })
+                 .attr("locker", 0)
+             d3.selectAll("#arc2").remove()
+             d3.selectAll("#label12").remove()
+             d3.selectAll("#arc1").remove()
              d3.selectAll("#label11").remove()
-             donuts1active = 0}
-
+             donuts1active = 0
+             donuts2active = 0;
+         }
 
         });
 
@@ -473,6 +515,7 @@ function drawNodes(nodes) {
 }
 
 function drawCircle(Nodes) {
+    var color = d3.scaleOrdinal(d3.schemeCategory10);
 
     // https://github.com/mbostock/d3/wiki/Force-Layout#wiki-nodes
     var groupnumber = 0
@@ -513,6 +556,9 @@ function drawCircle(Nodes) {
             .attr("cx", function (d, i) {return c.x ;})
             .attr("cy", function (d, i) {return c.y ;})
             .attr("r", function(d,i) { return c.r + 10; })
+            .attr("stroke", function(d) { return color(n); })
+            .attr("stroke-width", 2)
+
 
         d3.selectAll(".topic")
             .each(function(d) {
@@ -696,6 +742,29 @@ function drawLinks(links) {
 
 
 
+}
+
+function wrap(text, width) {
+  text.each(function() {
+    var text = d3.select(this),
+        words = text.text().split(/\s+/).reverse(),
+        word,
+        line = [],
+        lineNumber = 0,
+        lineHeight = 1.1, // ems
+        y = text.attr("y"),
+        tspan = text.text(null).append("tspan").attr("x", 0).attr("y", y);
+    while (word = words.pop()) {
+      line.push(word);
+      tspan.text(line.join(" "));
+      if (tspan.node().getComputedTextLength() > width) {
+        line.pop();
+        tspan.text(line.join(" "));
+        line = [word];
+        tspan = text.append("tspan").attr("x", 0).attr("y", y).attr("dy", ++lineNumber * lineHeight  + "em").text(word);
+      }
+    }
+  });
 }
 
 

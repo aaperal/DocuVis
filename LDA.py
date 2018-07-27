@@ -139,6 +139,19 @@ nodes_file_id = 0
 nodes_topic_list = []
 nodes_topicweight_list = []
 
+topicname_list=[]
+topicnode_list=[]
+
+for topic in texts_lda.show_topics(num_topics= topic_number, num_words=10):
+    majot_topic = topic[1].replace("+", ",")
+    majot_topic = majot_topic.split(',')
+    feature = majot_topic[1]
+    feature = feature.split('*')
+    k = feature[1].encode('utf8')
+    k = k.strip().strip('\"')
+
+    topicnode_list.append({"name": k, "type": "topic", "group": topic[0]})
+    topicname_list.append(k)
 
 for text in corpus:
     x = [0] * topic_number  # x is the topic matrix for singne document
@@ -153,7 +166,7 @@ for text in corpus:
         if features[1] > max_group_weight:
             topic_id = features[0]
             topic_matrix.append(x)
-            document_nodes_list.append({"name": path_leaf(file_list[nodes_file_id]), "type":"document","group": topic_id,"id": nodes_id,"fileid": nodes_file_id})
+            document_nodes_list.append({"name": path_leaf(file_list[nodes_file_id]), "type":"document","group": topic_id,"groupid":topicname_list[topic_id]  ,"id": nodes_id,"fileid": nodes_file_id})
             nodes_id = nodes_id + 1
             nodes_file_list.append(nodes_file_id)
             nodes_topic_list.append(topic_id)
@@ -178,18 +191,10 @@ for n in range(nodes_id):
             record = {"value":50, "type":"outerlink", "source":n, "target":m}
             links_list.append(record)
 #topic node list
-topicnode_list=[]
 
-topicname_list=[]
 
 for topic in texts_lda.show_topics(num_topics= topic_number, num_words=10):
-    majot_topic = topic[1].replace("+", ",")
-    majot_topic = majot_topic.split(',')
-    feature = majot_topic[1]
-    feature = feature.split('*')
-    k = feature[1].encode('utf8')
-    topicnode_list.append({"name": feature[1] , "type":"topic","group": topic[0]})
-    topicname_list.append(k)
+
     #build link between topic-nodes and docement-nodes
     x = [0]* topic_number
     x[topic[0]] = 1
@@ -244,7 +249,6 @@ filename_out = 'miserables.json'
 json_out = open(filename_out,'w')
 json_out.write(json_dump)
 json_out.close()
-
 
 
 
