@@ -1,0 +1,398 @@
+{
+ "nodes": [
+  {
+   "fileid": 0, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 0, 
+   "name": "Making the Right Moves.txt", 
+   "topicmatrix": [
+    0.9982075691223145, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 1, 
+   "group": 2, 
+   "groupid": "faculty", 
+   "id": 1, 
+   "name": "For Graduate Students & Postdoctoral Scholars.txt", 
+   "topicmatrix": [
+    0, 
+    0, 
+    0.9964931011199951, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 2, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 2, 
+   "name": "Faculty Mentoring Program.txt", 
+   "topicmatrix": [
+    0.9986451864242554, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 3, 
+   "group": 2, 
+   "groupid": "faculty", 
+   "id": 3, 
+   "name": "Graduate Women's Gatherings.txt", 
+   "topicmatrix": [
+    0, 
+    0, 
+    0.9915767312049866, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 4, 
+   "group": 2, 
+   "groupid": "faculty", 
+   "id": 4, 
+   "name": "Faculty Mentoring Program Resources.txt", 
+   "topicmatrix": [
+    0, 
+    0, 
+    0.9915808439254761, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 5, 
+   "group": 2, 
+   "groupid": "faculty", 
+   "id": 5, 
+   "name": "Diversity, Inclusion, and Equity.txt", 
+   "topicmatrix": [
+    0, 
+    0, 
+    0.9986539483070374, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 6, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 6, 
+   "name": "Career Development Guides.txt", 
+   "topicmatrix": [
+    0.2385403960943222, 
+    0.13468681275844574, 
+    0, 
+    0.6259162425994873, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 6, 
+   "group": 1, 
+   "groupid": "investigator", 
+   "id": 7, 
+   "name": "Career Development Guides.txt", 
+   "topicmatrix": [
+    0.2385403960943222, 
+    0.13468681275844574, 
+    0, 
+    0.6259162425994873, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 6, 
+   "group": 3, 
+   "groupid": "mentoring", 
+   "id": 8, 
+   "name": "Career Development Guides.txt", 
+   "topicmatrix": [
+    0.2385403960943222, 
+    0.13468681275844574, 
+    0, 
+    0.6259162425994873, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 7, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 9, 
+   "name": "Academic Guidance.txt", 
+   "topicmatrix": [
+    0.9922105669975281, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 8, 
+   "group": 2, 
+   "groupid": "faculty", 
+   "id": 10, 
+   "name": "Faculty Mentoring Toolkit.txt", 
+   "topicmatrix": [
+    0, 
+    0, 
+    0.9997615218162537, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 9, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 11, 
+   "name": "Faculty Mentoring Program2.txt", 
+   "topicmatrix": [
+    0.5277407169342041, 
+    0, 
+    0.4476739466190338, 
+    0.023058615624904633, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 9, 
+   "group": 2, 
+   "groupid": "faculty", 
+   "id": 12, 
+   "name": "Faculty Mentoring Program2.txt", 
+   "topicmatrix": [
+    0.5277407169342041, 
+    0, 
+    0.4476739466190338, 
+    0.023058615624904633, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 9, 
+   "group": 3, 
+   "groupid": "mentoring", 
+   "id": 13, 
+   "name": "Faculty Mentoring Program2.txt", 
+   "topicmatrix": [
+    0.5277407169342041, 
+    0, 
+    0.4476739466190338, 
+    0.023058615624904633, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 10, 
+   "group": 1, 
+   "groupid": "investigator", 
+   "id": 14, 
+   "name": "Funding Opportunities for New and Young Faculty.txt", 
+   "topicmatrix": [
+    0, 
+    0.9997445344924927, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 11, 
+   "group": 3, 
+   "groupid": "mentoring", 
+   "id": 15, 
+   "name": "Report of the Faculty Mentoring Study.txt", 
+   "topicmatrix": [
+    0, 
+    0, 
+    0, 
+    0.9998257756233215, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 12, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 16, 
+   "name": "Top Ten Things New Faculty Members .txt", 
+   "topicmatrix": [
+    0.9985814094543457, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 13, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 17, 
+   "name": "Faculty Responsibilities in Mentoring Relationships.txt", 
+   "topicmatrix": [
+    0.9977613091468811, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 14, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 18, 
+   "name": "Helping Students: A Peer Mentoring Approach.txt", 
+   "topicmatrix": [
+    0.9977024793624878, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 15, 
+   "group": 2, 
+   "groupid": "faculty", 
+   "id": 19, 
+   "name": "Career Resources.txt", 
+   "topicmatrix": [
+    0, 
+    0, 
+    0.9984315037727356, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 16, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 20, 
+   "name": "Mentoring Program.txt", 
+   "topicmatrix": [
+    0.9982167482376099, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "fileid": 17, 
+   "group": 0, 
+   "groupid": "mentor", 
+   "id": 21, 
+   "name": "Advising & Mentoring.txt", 
+   "topicmatrix": [
+    0.9960196018218994, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0, 
+    0
+   ], 
+   "type": "document"
+  }, 
+  {
+   "group": 0, 
+   "name": "mentor", 
+   "type": "topic"
+  }, 
+  {
+   "group": 1, 
+   "name": "investigator", 
+   "type": "topic"
+  }, 
+  {
+   "group": 2, 
+   "name": "faculty", 
+   "type": "topic"
+  }, 
+  {
+   "group": 3, 
+   "name": "mentoring", 
+   "type": "topic"
+  }
+ ]
+}
