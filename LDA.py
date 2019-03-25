@@ -5,24 +5,31 @@ from nltk.tokenize import sent_tokenize, word_tokenize
 from nltk.corpus import stopwords
 from gensim import corpora, models
 import logging
+#import nltk
+#nltk.download('wordnet')
 
 import unicodedata
 import sys
 import ntpath
 import scipy
 import json
+import matplotlib as mpl 
+# Necessary for backend in Mac OS
+mpl.use('TkAgg')
 import matplotlib.pyplot as plt
 import csv
 
 from gensim.models import Phrases
 from gensim.models.coherencemodel import CoherenceModel
 
+# to extract text from pdfs
+import pdfconverter as p2t
 
 logging.basicConfig(format='%(asctime)s : %(levelname)s : %(message)s', level=logging.INFO)
 
 def remove_punctuation(text):
-    tbl = dict.fromkeys(i for i in xrange(sys.maxunicode)
-                      if unicodedata.category(unichr(i)).startswith('P'))
+    tbl = dict.fromkeys(i for i in range(sys.maxunicode) # xrange(sys.maxunicode) before python3
+                      if unicodedata.category(chr(i)).startswith('P')) # unichr(i) before python3
     return text.translate(tbl)
 
 
@@ -60,25 +67,38 @@ def normalize(words):
 
 
 
-file_list = glob.glob(os.path.join(os.getcwd(), "documents", "*.txt"))
+file_list = glob.glob(os.path.join(os.getcwd(), "pdfs", "*.pdf"))
 documents = []
 train_set = []
 
 file_number = 0
-
+"""
 for file_path in file_list:
     file_number = file_number + 1
     with open(file_path) as f_input:
         lines = f_input.read()
         train_line = lines.split(" ")
         train_set.append(train_line)
-        lines = lines.decode('utf-8').strip()
+        lines = lines.strip() # lines.decode('utf-8').strip() before python 3
         lines = tokenize(lines)
         lines = normalize(lines)
         documents.append(lines)
+"""
 
-print train_set
-print documents
+for file_path in file_list:
+    file_number = file_number + 1
+
+    lines = p2t.convert_pdf_to_txt(file_path) # converts pdf to txt
+
+    train_line = lines.split(" ")
+    train_set.append(train_line)
+    lines = lines.strip() # lines.decode('utf-8').strip() before python 3
+    lines = tokenize(lines)
+    lines = normalize(lines)
+    documents.append(lines)
+print(train_set)
+print('BARRIER!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!')
+print(documents)
 
 stoplist = set(stopwords.words('english'))
 
@@ -89,17 +109,17 @@ bigram = Phrases(train_set, min_count=1, threshold=5)
 
 for text in texts:
     text = bigram[text]
-print texts
+print(texts)
 
 
 dictionary = corpora.Dictionary(texts)
-dictionary.save('/Users/yaxu/Desktop/LDA/tmp/lda.dict')  # store the dictionary, for future reference
-print dictionary
+dictionary.save('/Users/Boby/Documents/Github/CMPS261-Project/DocuVis/tmp/lda.dict')  # store the dictionary, for future reference
+print(dictionary)
 
 
 corpus = [dictionary.doc2bow(text) for text in texts]
-corpora.MmCorpus.serialize('/Users/yaxu/Desktop/LDA/tmp/lda.mm', corpus)  # store to disk, for later use
-mm = corpora.MmCorpus('/Users/yaxu/Desktop/LDA/tmp/lda.mm')
+corpora.MmCorpus.serialize('/Users/Boby/Documents/Github/CMPS261-Project/DocuVis/tmp/lda.mm', corpus)  # store to disk, for later use
+mm = corpora.MmCorpus('/Users/Boby/Documents/Github/CMPS261-Project/DocuVis/tmp/lda.mm')
 
 
 lda = models.ldamodel.LdaModel
@@ -147,8 +167,8 @@ for topic in texts_lda.show_topics(num_topics= topic_number, num_words=10):
     majot_topic = majot_topic.split(',')
     feature = majot_topic[1]
     feature = feature.split('*')
-    k = feature[1].encode('utf8')
-    k = k.strip().strip('\"')
+    k = feature[1]# no more byte .encode('utf8') # byte
+    k = k.strip().strip('\"') # byte - got rid of b before '\"'
 
     topicnode_list.append({"name": k, "type": "topic", "group": topic[0]})
     topicname_list.append(k)
@@ -216,10 +236,10 @@ for n in range(len(topic_node_topic_matrix)):
 
 for n in range(nodes_id):
     k = str(n)
-    with open("data" + k + ".csv", 'wb') as csvfile:
+    with open("data" + k + ".csv", 'w') as csvfile: # change wb to w 
         filewriter = csv.writer(csvfile, delimiter=',',
                                 quotechar='|', quoting=csv.QUOTE_MINIMAL)
-        filewriter.writerow(['topic', 'weight'])
+        filewriter.writerow(['topic', 'weight']) # writing as byte, originally might need to make byte if preserve wb
         topiclist = nodes_topicweight_list[n]
         m = 0
         for topic in topicname_list:
@@ -229,7 +249,7 @@ for n in range(nodes_id):
                     weight = feature[1]
             topic = ''.join(topic.split())
             t = [topic, weight]
-            filewriter.writerow(t)
+            filewriter.writerow(t) # possible modification required
             m += 1
 
 nodes_list = document_nodes_list+topicnode_list

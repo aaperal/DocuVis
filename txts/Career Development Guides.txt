@@ -5,7 +5,7 @@ Experimental Quality
 Experimental Quality
 Scientific research, according to a recent book on experimental design, is the process of determining some property Y about some thing X, to a degree of accuracy sufficient for another person to confirm this property Y.
 
-￼In other words: If it needs to be accurate enough for someone else to confirm it, it needs to be reproducible. Therefore, what distinguishes research from playful observation is reproducibility.
+In other words: If it needs to be accurate enough for someone else to confirm it, it needs to be reproducible. Therefore, what distinguishes research from playful observation is reproducibility.
 
 read more about experimental quality
 Advancing Careers

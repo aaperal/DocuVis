@@ -1,0 +1,446 @@
+{
+ "links": [
+  {
+   "source": 0,
+   "target": 9,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 1,
+   "target": 8,
+   "type": "innerlink",
+   "value": 9.999999999977796e-05
+  },
+  {
+   "source": 3,
+   "target": 4,
+   "type": "innerlink",
+   "value": 0.004333972176450052
+  },
+  {
+   "source": 3,
+   "target": 11,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 3,
+   "target": 12,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 4,
+   "target": 5,
+   "type": "outerlink",
+   "value": 50
+  },
+  {
+   "source": 4,
+   "target": 11,
+   "type": "innerlink",
+   "value": 0.004333972176449941
+  },
+  {
+   "source": 4,
+   "target": 12,
+   "type": "innerlink",
+   "value": 0.004333972176450163
+  },
+  {
+   "source": 6,
+   "target": 10,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 7,
+   "target": 13,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 7,
+   "target": 14,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 7,
+   "target": 15,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 11,
+   "target": 12,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 13,
+   "target": 14,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 13,
+   "target": 15,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 14,
+   "target": 15,
+   "type": "innerlink",
+   "value": 0.0001
+  },
+  {
+   "source": 2,
+   "target": 16,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 3,
+   "target": 17,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 4,
+   "target": 17,
+   "type": "topiclink",
+   "value": 0.00433397217644983
+  },
+  {
+   "source": 11,
+   "target": 17,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 12,
+   "target": 17,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 1,
+   "target": 18,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 8,
+   "target": 18,
+   "type": "topiclink",
+   "value": 9.999999999977796e-05
+  },
+  {
+   "source": 0,
+   "target": 19,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 9,
+   "target": 19,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 5,
+   "target": 20,
+   "type": "topiclink",
+   "value": 0.9081760214497364
+  },
+  {
+   "source": 7,
+   "target": 20,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 13,
+   "target": 20,
+   "type": "topiclink",
+   "value": 9.999999999977796e-05
+  },
+  {
+   "source": 14,
+   "target": 20,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 15,
+   "target": 20,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 6,
+   "target": 21,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 10,
+   "target": 21,
+   "type": "topiclink",
+   "value": 0.0001
+  },
+  {
+   "source": 16,
+   "target": 17,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 16,
+   "target": 18,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 16,
+   "target": 19,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 16,
+   "target": 20,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 16,
+   "target": 21,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 17,
+   "target": 18,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 17,
+   "target": 19,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 17,
+   "target": 20,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 17,
+   "target": 21,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 18,
+   "target": 19,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 18,
+   "target": 20,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 18,
+   "target": 21,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 19,
+   "target": 20,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 19,
+   "target": 21,
+   "type": "outertopiclink",
+   "value": 1.0001
+  },
+  {
+   "source": 20,
+   "target": 21,
+   "type": "outertopiclink",
+   "value": 1.0001
+  }
+ ],
+ "nodes": [
+  {
+   "fileid": 0,
+   "group": 3,
+   "groupid": "day",
+   "id": 0,
+   "name": "_I Have a Dream_ Speech.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 1,
+   "group": 2,
+   "groupid": "u",
+   "id": 1,
+   "name": "A Declaration of Independence.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 2,
+   "group": 0,
+   "groupid": "park",
+   "id": 2,
+   "name": "An Act of Courage.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 3,
+   "group": 1,
+   "groupid": "black",
+   "id": 3,
+   "name": "AN APPEAL FOR HUMAN RIGHTS.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 4,
+   "group": 1,
+   "groupid": "black",
+   "id": 4,
+   "name": "Black Power Speech.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 4,
+   "group": 4,
+   "groupid": "right",
+   "id": 5,
+   "name": "Black Power Speech.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 5,
+   "group": 5,
+   "groupid": "state",
+   "id": 6,
+   "name": "Brown v. Board of Education of Topeka I and II.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 6,
+   "group": 4,
+   "groupid": "right",
+   "id": 7,
+   "name": "Haverford Statement.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 7,
+   "group": 2,
+   "groupid": "u",
+   "id": 8,
+   "name": "I See the Promised Land.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 8,
+   "group": 3,
+   "groupid": "day",
+   "id": 9,
+   "name": "Letter to Martin Luther King.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 9,
+   "group": 5,
+   "groupid": "state",
+   "id": 10,
+   "name": "Plessy v Ferguson.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 10,
+   "group": 1,
+   "groupid": "black",
+   "id": 11,
+   "name": "Port Huron Statement.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 11,
+   "group": 1,
+   "groupid": "black",
+   "id": 12,
+   "name": "Racial Ideals.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 12,
+   "group": 4,
+   "groupid": "right",
+   "id": 13,
+   "name": "Ten-Point Program.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 13,
+   "group": 4,
+   "groupid": "right",
+   "id": 14,
+   "name": "The Ballot or the Bullet.pdf",
+   "type": "document"
+  },
+  {
+   "fileid": 14,
+   "group": 4,
+   "groupid": "right",
+   "id": 15,
+   "name": "The Power of Non-Violence.pdf",
+   "type": "document"
+  },
+  {
+   "group": 0,
+   "name": "park",
+   "type": "topic"
+  },
+  {
+   "group": 1,
+   "name": "black",
+   "type": "topic"
+  },
+  {
+   "group": 2,
+   "name": "u",
+   "type": "topic"
+  },
+  {
+   "group": 3,
+   "name": "day",
+   "type": "topic"
+  },
+  {
+   "group": 4,
+   "name": "right",
+   "type": "topic"
+  },
+  {
+   "group": 5,
+   "name": "state",
+   "type": "topic"
+  }
+ ]
+}
