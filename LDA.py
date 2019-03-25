@@ -72,18 +72,6 @@ documents = []
 train_set = []
 
 file_number = 0
-"""
-for file_path in file_list:
-    file_number = file_number + 1
-    with open(file_path) as f_input:
-        lines = f_input.read()
-        train_line = lines.split(" ")
-        train_set.append(train_line)
-        lines = lines.strip() # lines.decode('utf-8').strip() before python 3
-        lines = tokenize(lines)
-        lines = normalize(lines)
-        documents.append(lines)
-"""
 
 for file_path in file_list:
     file_number = file_number + 1
